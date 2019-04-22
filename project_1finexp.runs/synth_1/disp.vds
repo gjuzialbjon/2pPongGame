@@ -1,0 +1,532 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sun Dec 25 21:26:30 2016
+# Process ID: 19044
+# Current directory: C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.runs/synth_1
+# Command line: vivado.exe -log disp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source disp.tcl
+# Log file: C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.runs/synth_1/disp.vds
+# Journal file: C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source disp.tcl -notrace
+Command: synth_design -top disp -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4808 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 282.016 ; gain = 72.871
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'disp' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/disp.sv:4]
+INFO: [Synth 8-638] synthesizing module 'timeProvider' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:3]
+INFO: [Synth 8-256] done synthesizing module 'timeProvider' (1#1) [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:3]
+INFO: [Synth 8-638] synthesizing module 'Matrix' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/Matrix.sv:2]
+INFO: [Synth 8-638] synthesizing module 'Divider' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/Divider.sv:2]
+INFO: [Synth 8-256] done synthesizing module 'Divider' (2#1) [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/Divider.sv:2]
+INFO: [Synth 8-226] default block is never used [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/Matrix.sv:51]
+INFO: [Synth 8-256] done synthesizing module 'Matrix' (3#1) [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/Matrix.sv:2]
+INFO: [Synth 8-638] synthesizing module 'SevSeg_4digit' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/SevenSeg.sv:29]
+	Parameter N bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SevSeg_4digit' (4#1) [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/SevenSeg.sv:29]
+WARNING: [Synth 8-689] width (32) of port connection 'in0' does not match port width (4) of module 'SevSeg_4digit' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/disp.sv:503]
+WARNING: [Synth 8-689] width (32) of port connection 'in3' does not match port width (4) of module 'SevSeg_4digit' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/disp.sv:503]
+INFO: [Synth 8-256] done synthesizing module 'disp' (5#1) [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/disp.sv:4]
+WARNING: [Synth 8-3331] design timeProvider has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 319.520 ; gain = 110.375
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 319.520 ; gain = 110.375
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/constrs_1/new/cs.xdc]
+Finished Parsing XDC File [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/constrs_1/new/cs.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/constrs_1/new/cs.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/disp_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/disp_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 624.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 624.418 ; gain = 415.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 624.418 ; gain = 415.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 624.418 ; gain = 415.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:75]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:66]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:57]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:48]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:39]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:29]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/timeProvider.sv:20]
+INFO: [Synth 8-5545] ROM "i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "greenDivider" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'oldy_reg[31:0]' into 'curry_reg[31:0]' [C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.srcs/sources_1/new/disp.sv:87]
+INFO: [Synth 8-5545] ROM "p1score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p1score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p2score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p2score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "up" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "up" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 624.418 ; gain = 415.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 17    
+	               24 Bit    Registers := 8     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   7 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 75    
+	   3 Input     32 Bit        Muxes := 5     
+	   2 Input     24 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   3 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 9     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module disp 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 14    
+	   3 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 15    
+	               24 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 60    
+	   3 Input     32 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 5     
+	   3 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 9     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module timeProvider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   7 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 14    
+	   7 Input      1 Bit        Muxes := 1     
+Module Divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Matrix 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module SevSeg_4digit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "theSignals/i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "greenDivider" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p1score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p2score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p2score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p1score" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "total2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "data30" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "redLeds" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design timeProvider has unconnected port reset
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[0]' (FDE) to 'timer1/speeder_reg[1]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[1]' (FDE) to 'timer1/speeder_reg[2]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[2]' (FDE) to 'timer1/speeder_reg[3]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[3]' (FDE) to 'timer1/speeder_reg[4]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[4]' (FDE) to 'timer1/speeder_reg[5]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[5]' (FDE) to 'timer1/speeder_reg[29]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[10]' (FDE) to 'timer1/speeder_reg[11]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[21]' (FDE) to 'timer1/speeder_reg[23]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[29]' (FDE) to 'timer1/speeder_reg[30]'
+INFO: [Synth 8-3886] merging instance 'timer1/speeder_reg[30]' (FDE) to 'timer1/speeder_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (timer1/\speeder_reg[31] )
+INFO: [Synth 8-3886] merging instance 'currx_reg[1]' (FDE) to 'oldx_reg[1]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[2]' (FDE) to 'oldx_reg[2]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[3]' (FDE) to 'oldx_reg[3]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[4]' (FDE) to 'oldx_reg[4]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[5]' (FDE) to 'oldx_reg[5]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[6]' (FDE) to 'oldx_reg[6]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[7]' (FDE) to 'oldx_reg[7]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[8]' (FDE) to 'oldx_reg[8]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[9]' (FDE) to 'oldx_reg[9]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[10]' (FDE) to 'oldx_reg[10]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[11]' (FDE) to 'oldx_reg[11]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[12]' (FDE) to 'oldx_reg[12]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[13]' (FDE) to 'oldx_reg[13]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[14]' (FDE) to 'oldx_reg[14]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[15]' (FDE) to 'oldx_reg[15]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[16]' (FDE) to 'oldx_reg[16]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[17]' (FDE) to 'oldx_reg[17]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[18]' (FDE) to 'oldx_reg[18]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[19]' (FDE) to 'oldx_reg[19]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[20]' (FDE) to 'oldx_reg[20]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[21]' (FDE) to 'oldx_reg[21]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[22]' (FDE) to 'oldx_reg[22]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[23]' (FDE) to 'oldx_reg[23]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[24]' (FDE) to 'oldx_reg[24]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[25]' (FDE) to 'oldx_reg[25]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[26]' (FDE) to 'oldx_reg[26]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[27]' (FDE) to 'oldx_reg[27]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[28]' (FDE) to 'oldx_reg[28]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[29]' (FDE) to 'oldx_reg[29]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[30]' (FDE) to 'oldx_reg[30]'
+INFO: [Synth 8-3886] merging instance 'currx_reg[31]' (FDE) to 'oldx_reg[31]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][22]' (FD) to 'board_reg[5][22]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][22]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][22]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[2][22]' (FD) to 'board_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][21]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][21]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][20]' (FD) to 'board_reg[5][20]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][20]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][20]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[2][20]' (FD) to 'board_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][19]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][19]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][18]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][18]' (FD) to 'board_reg[7][17]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[6][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[5][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[2][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[1][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[0][17]' (FD) to 'board_reg[7][15]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[6][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[5][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[2][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[1][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[0][15]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][14]' (FD) to 'board_reg[7][13]'
+INFO: [Synth 8-3886] merging instance 'board_reg[6][14]' (FD) to 'board_reg[7][13]'
+INFO: [Synth 8-3886] merging instance 'board_reg[5][14]' (FD) to 'board_reg[7][13]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][14]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][14]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[2][14]' (FD) to 'board_reg[2][13]'
+INFO: [Synth 8-3886] merging instance 'board_reg[1][14]' (FD) to 'board_reg[2][13]'
+INFO: [Synth 8-3886] merging instance 'board_reg[0][14]' (FD) to 'board_reg[2][13]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][13]' (FD) to 'board_reg[7][12]'
+INFO: [Synth 8-3886] merging instance 'board_reg[6][13]' (FD) to 'board_reg[7][12]'
+INFO: [Synth 8-3886] merging instance 'board_reg[5][13]' (FD) to 'board_reg[7][12]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][13]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][13]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[2][13]' (FD) to 'board_reg[2][12]'
+INFO: [Synth 8-3886] merging instance 'board_reg[1][13]' (FD) to 'board_reg[2][12]'
+INFO: [Synth 8-3886] merging instance 'board_reg[0][13]' (FD) to 'board_reg[2][12]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][12]' (FD) to 'board_reg[7][11]'
+INFO: [Synth 8-3886] merging instance 'board_reg[6][12]' (FD) to 'board_reg[7][11]'
+INFO: [Synth 8-3886] merging instance 'board_reg[5][12]' (FD) to 'board_reg[7][11]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][12]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][12]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[2][12]' (FD) to 'board_reg[2][11]'
+INFO: [Synth 8-3886] merging instance 'board_reg[1][12]' (FD) to 'board_reg[2][11]'
+INFO: [Synth 8-3886] merging instance 'board_reg[0][12]' (FD) to 'board_reg[2][11]'
+INFO: [Synth 8-3886] merging instance 'board_reg[7][11]' (FD) to 'board_reg[7][10]'
+INFO: [Synth 8-3886] merging instance 'board_reg[6][11]' (FD) to 'board_reg[7][10]'
+INFO: [Synth 8-3886] merging instance 'board_reg[5][11]' (FD) to 'board_reg[7][10]'
+INFO: [Synth 8-3886] merging instance 'board_reg[4][11]' (FD) to 'board_reg[7][9]'
+INFO: [Synth 8-3886] merging instance 'board_reg[3][11]' (FD) to 'board_reg[7][9]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\board_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\set2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\set1_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (speeder_reg[31]) is unused and will be removed from module timeProvider.
+WARNING: [Synth 8-3332] Sequential element (set1_reg[0]) is unused and will be removed from module disp.
+WARNING: [Synth 8-3332] Sequential element (set2_reg[4]) is unused and will be removed from module disp.
+WARNING: [Synth 8-3332] Sequential element (board_reg[0][8]) is unused and will be removed from module disp.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 624.418 ; gain = 415.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 624.418 ; gain = 415.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 634.031 ; gain = 424.887
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (up_reg[0]) is unused and will be removed from module disp.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:58 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |   257|
+|3     |LUT1   |   199|
+|4     |LUT2   |   730|
+|5     |LUT3   |   159|
+|6     |LUT4   |   345|
+|7     |LUT5   |   263|
+|8     |LUT6   |   396|
+|9     |MUXF7  |     9|
+|10    |FDRE   |   616|
+|11    |FDSE   |    62|
+|12    |IBUF   |    10|
+|13    |OBUF   |    35|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+--------------+------+
+|      |Instance       |Module        |Cells |
++------+---------------+--------------+------+
+|1     |top            |              |  3084|
+|2     |  ma           |Matrix        |   345|
+|3     |    theSignals |Divider       |   296|
+|4     |  seven        |SevSeg_4digit |    56|
+|5     |  timer1       |timeProvider  |   271|
++------+---------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 673.793 ; gain = 464.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 673.793 ; gain = 159.750
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 673.793 ; gain = 464.648
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 267 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+176 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 673.793 ; gain = 464.648
+INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Desktop/BILKENT/cs223/FinalProject/project_1finexp/project_1finexp.runs/synth_1/disp.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 673.793 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 25 21:27:35 2016...

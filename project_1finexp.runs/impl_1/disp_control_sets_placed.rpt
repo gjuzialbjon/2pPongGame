@@ -1,0 +1,90 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Dec 25 21:28:21 2016
+| Host         : Asus running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file disp_control_sets_placed.rpt
+| Design       : disp
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    25 |
+| Unused register locations in slices containing registers |   106 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              68 |           29 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             133 |           43 |
+| Yes          | No                    | No                     |             408 |          169 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              69 |           25 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------+----------------------------------+------------------+----------------+
+|  Clock Signal  |   Enable Signal   |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++----------------+-------------------+----------------------------------+------------------+----------------+
+|  f_0           |                   | ma/theSignals/oe_i_1_n_0         |                1 |              1 |
+| ~f_0           |                   | ma/theSignals/CO[0]              |                1 |              1 |
+|  timer_BUFG    | set1[1]_i_2_n_0   | set1[1]_i_1_n_0                  |                1 |              1 |
+|  timer_BUFG    | set1[2]_i_2_n_0   | set1[2]_i_1_n_0                  |                1 |              1 |
+|  timer_BUFG    | set1[3]_i_2_n_0   | set1[3]_i_1_n_0                  |                1 |              1 |
+|  timer_BUFG    | set1[4]_i_2_n_0   | set1[4]_i_1_n_0                  |                1 |              1 |
+|  timer_BUFG    | set2[0]_i_2_n_0   | set2[0]_i_1_n_0                  |                1 |              1 |
+|  timer_BUFG    | set2[1]_i_2_n_0   | set2[1]_i_1_n_0                  |                1 |              1 |
+|  timer_BUFG    | set2[2]_i_2_n_0   | set2[2]_i_1_n_0                  |                1 |              1 |
+|  timer_BUFG    | set2[3]_i_2_n_0   | set2[3]_i_1_n_0                  |                1 |              1 |
+| ~CLK_IBUF_BUFG |                   | ma/theSignals/shcp1_carry__2_n_4 |                2 |              2 |
+|  timer_BUFG    |                   | pad2z[31]_i_1_n_0                |                3 |              4 |
+| ~f_0           |                   |                                  |                4 |              6 |
+|  timer_BUFG    |                   | board[0][6]_i_1_n_0              |                3 |              8 |
+|  timer_BUFG    |                   | board[0][5]_i_1_n_0              |                3 |              8 |
+|  timer_BUFG    |                   | board[0][3]_i_1_n_0              |                2 |              8 |
+|  CLK_IBUF_BUFG | timer1/speeder    |                                  |                7 |             21 |
+|  CLK_IBUF_BUFG |                   |                                  |                8 |             27 |
+|  timer_BUFG    | pad2z[31]_i_1_n_0 | right[30]_i_1_n_0                |               11 |             30 |
+| ~f_0           |                   | ma/theSignals/i[31]_i_1_n_0      |                8 |             31 |
+|  timer_BUFG    | pad2z[31]_i_1_n_0 | up[31]_i_1_n_0                   |                6 |             31 |
+|  CLK_IBUF_BUFG |                   | timer1/count_reg[31]_i_1_n_1     |                9 |             32 |
+|  timer_BUFG    |                   |                                  |               17 |             35 |
+|  timer_BUFG    |                   | board[0][7]_i_1_n_0              |               11 |             38 |
+|  timer_BUFG    | pad2z[31]_i_1_n_0 |                                  |              162 |            387 |
++----------------+-------------------+----------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    10 |
+| 2      |                     1 |
+| 4      |                     1 |
+| 6      |                     1 |
+| 8      |                     3 |
+| 16+    |                     9 |
++--------+-----------------------+
+
+
